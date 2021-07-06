@@ -8,7 +8,7 @@ Click here to see my currency converter:
 
 ## Description
 
-This is a simple to-do list application, which will help you to organize your daily tasks.
+This is a simple currency converter.
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
