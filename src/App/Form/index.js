@@ -1,32 +1,27 @@
 import { useState } from "react";
 import { currencies } from "../currencies";
 import { Result } from "./Result";
-import "./style.css";
+import { StyledForm, Header, Content, Input, Footer, Button } from "./styled";
 
 export const Form = ({ calculateResult, result }) => {
     const [currency, setCurrency] = useState(currencies[0].short);
     const [amount, setAmount] = useState("");
-    
+
     const onSubmit = (event) => {
         event.preventDefault();
         calculateResult(currency, amount);
     }
 
     return (
-        <form className="form" onSubmit={onSubmit}>
-            <h1 className="form__header">
-                Przelicznik walut
-            </h1>
+        <StyledForm onSubmit={onSubmit}>
+            <Header>Przelicznik walut</Header>
             <p>
                 <label>
-                    <span className="form__labelText">
-                        Kwota w zł*:
-                    </span>
-                    <input
+                    <Content>Kwota w zł*:</Content>
+                    <Input
                         value={amount}
                         onChange={({ target }) => setAmount(target.value)}
                         placeholder="Wpisz kwotę w zł"
-                        className="form__field"
                         type="number"
                         required
                         step="0.01"
@@ -35,11 +30,9 @@ export const Form = ({ calculateResult, result }) => {
             </p>
             <p>
                 <label>
-                    <span className="form__labelText">
-                        Waluta:
-                    </span>
-                    <select
-                        className="form__field"
+                    <Content>Waluta:</Content>
+                    <Input
+                        as="select"
                         value={currency}
                         onChange={({ target }) => setCurrency(target.value)}
                     >
@@ -51,18 +44,18 @@ export const Form = ({ calculateResult, result }) => {
                                 {currency.name}
                             </option>
                         )))}
-                    </select>
+                    </Input>
                 </label>
             </p>
             <p>
-                <button className="form__button">Przelicz!</button>
+                <Button>Przelicz!</Button>
             </p>
 
-            <p className="form__info">
+            <Footer>
                 Kursy pochodzą ze strony www.internetowykantor.pl z dnia 30.06.2021
-            </p>
+            </Footer>
 
             <Result result={result} />
-        </form>
+        </StyledForm>
     )
 }
