@@ -8,7 +8,7 @@ Click here to see my currency converter: [currency-converter](https://piotrekbrz
 
 ## Description
 
-This is a simple currency converter.
+This is a simple currency converter. The data is fetched from external API.
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
