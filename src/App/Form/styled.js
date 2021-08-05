@@ -41,3 +41,13 @@ export const Button = styled.button`
         background-color: hsl(180, 100%, 30%);
     }
 `;
+
+export const Loading = styled.p`
+    padding-top: 30px;
+    color: teal;
+`;
+
+export const Failure = styled.p`
+    padding-top: 30px;
+    color: crimson;
+`;
