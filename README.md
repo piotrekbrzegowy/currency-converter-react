@@ -1,7 +1,6 @@
 # Currency converter
 
 Hi everyone!
-This web page was created as part of the [YouCode](https://youcode.pl/frontend-developer-od-podstaw/) course.
 ## Link to the web page
 
 Click here to see my currency converter: [currency-converter](https://piotrekbrzegowy.github.io/currency-converter-react/)
